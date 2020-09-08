@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> LetsChat - Manchester </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>LetsChat - Manchester</title>
+  </head>
+  <body>
     <header>
-        <h1> LetsChat - Manchester </h1>
+      <h1 class="title">LetsChat - Manchester</h1>
     </header>
-</body>
+    <main>
+      <form class="chat-form">
+        <label for="name">Name</label>
+        <input class="u-full-width" type="text" id="name" name="name" />
+        <label for="content">Chat</label>
+        <textarea class="u-full-width" type="text" id="content" name="content"></textarea>
+        <button class="button-primary">Send your Chat!</button>
+      </form>
+    </main>
+    <script src="client.js"></script>
+  </body>
 </html>
