@@ -5,7 +5,7 @@ const Filter = require('bad-words');
 
 const app = express();
 
-const db = monk('localhost/letschat');
+const db = monk(process.env.MONGO_URI || 'localhost/letschat');
 const messages = db.get('messages');
 const filter = new Filter();
 
