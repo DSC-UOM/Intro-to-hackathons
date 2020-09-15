@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const messagesDiv = document.querySelector('.messages');
-const API_URL = 'http://localhost:5000/message';
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/message' : 'https://gentle-shore-15785.herokuapp.com/message';
 
 listAllMessages();
 

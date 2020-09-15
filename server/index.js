@@ -3,7 +3,7 @@ const cors = require('cors');
 const monk = require('monk');
 const Filter = require('bad-words');
 
-const app = express();
+const app = express(); 
 
 const db = monk(process.env.MONGO_URI || 'localhost/letschat');
 const messages = db.get('messages');
@@ -36,6 +36,7 @@ app.post('/message', (request, response) => {
     });
 });
 
-app.listen(5000, () => {
-    console.log('Listening on http://localhost:5000');
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log('Listening on ${ PORT }');
 });
